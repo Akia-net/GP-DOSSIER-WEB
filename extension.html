@@ -23,9 +23,9 @@
         <!-- Extension Section -->
         <section id="extension" class="extension section-padding">
             <div class="section-title">
-                <div class="tag">[SECTION - 03 - THE_EXTENSION]</div>
+                <div class="tag">[SECTION - 03 - THE_APP]</div>
                 <h2>From problem to an actionable tool.</h2>
-                <p>We turned our research into a browser extension that helps users see where images came from — and whether the people who made them ever agreed to be part of the training set.</p>
+                <p>We turned our research into AI Art Detective — a small floating widget for macOS. Drop in any image and it returns an AI-generation probability plus the closest matching art style, powered by a cloud-hosted detection model.</p>
             </div>
 
             <div class="extension-features">
@@ -33,41 +33,40 @@
                     <div class="feature-item">
                         <div class="point-number">01</div>
                         <h3>Detects AI-generated images</h3>
-                        <p>Scans images on the page you're viewing and flags likely AI-generated content using model-fingerprint detection.</p>
+                        <p>Every image you drop in runs through a dedicated AI-vs-human detection model and returns a probability score in seconds.</p>
                     </div>
                     <div class="feature-item">
                         <div class="point-number">02</div>
-                        <h3>Surfaces the source</h3>
-                        <p>Where possible, links an image back to its likely original creator or training-set origin, restoring attribution the model stripped away.</p>
+                        <h3>Flags the closest art style</h3>
+                        <p>A zero-shot classifier compares the artwork against dozens of styles and movements — from Studio Ghibli to Baroque — to surface what it's likely imitating.</p>
                     </div>
                     <div class="feature-item">
                         <div class="point-number">03</div>
-                        <h3>Shows the consent status</h3>
-                        <p>Marks whether an image's creator has opted out of AI training datasets, so you can make an informed choice before sharing.</p>
+                        <h3>Lives on your desktop, not your browser</h3>
+                        <p>It's a small always-on-top widget, not a page scanner. Drop in a file from anywhere — no browser or per-site install required.</p>
                     </div>
                 </div>
-                
+
                 <div class="extension-mockup">
-                    <div class="mockup-header">
-                        <span class="mockup-dots"><span></span><span></span><span></span></span>
-                        <span class="mockup-url">https://example-gallery.com/artwork</span>
-                    </div>
                     <div class="mockup-body">
                         <div class="mockup-image"></div>
-                        <!-- Widget mockup -->
+                        <!-- Widget mockup, matching the real app's terracotta UI -->
                         <div class="widget">
+                            <div class="widget-titlebar">
+                                <span>🎨 AI Art Detective</span>
+                                <span class="widget-close">✕</span>
+                            </div>
                             <div class="widget-header">
-                                <span class="tag">[WIDGET - SCAN_RESULT]</span>
-                                <h4>Likely AI-generated</h4>
-                                <p>No opt-out record found - 3 near-identical matches</p>
+                                <span class="tag">[WIDGET - ANALYSIS_RESULT]</span>
+                                <h4>Analysis Results:</h4>
                             </div>
                             <div class="widget-details">
-                                <div>ATTRIBUTION:<br>NONE</div>
-                                <div>CONSENT:<br>UNKNOWN</div>
+                                <div>AI PROBABILITY:<br>87.3% AI</div>
+                                <div>ORIGIN STYLE:<br>STUDIO GHIBLI (62%)</div>
                             </div>
                         </div>
                     </div>
-                    <div class="img-caption">[FIG.03 - LIVE_WIDGET_OVERLAY]</div>
+                    <div class="img-caption">[FIG.03 - LIVE_WIDGET_ON_DESKTOP]</div>
                 </div>
             </div>
 
@@ -77,8 +76,18 @@
                     <h2>It gives the choice back to the viewer.</h2>
                 </div>
                 <div class="footer-right">
-                    <p>The extension doesn't block AI art or judge it. It makes the hidden context visible — who made a thing, whether they consented, and whether what you're looking at was written by a person or sampled by a model.</p>
-                    <p>PLACEHOLDER — Replace this with installation instructions, a link to the Chrome Web Store listing, or an embedded live demo once the extension is published.</p>
+                    <p>AI Art Detective doesn't block or judge content for you — it gives you a data point. Drop in an image, see how likely it is AI-generated and which style it's echoing, then decide for yourself what that means.</p>
+
+                    <div class="download-cta">
+                        <a href="https://github.com/Akia-net/ai-art-detective/releases/download/v1.0.0/AI-Art-Detective-macOS-arm64.zip" class="btn btn-terracotta">⬇ DOWNLOAD FOR macOS</a>
+                        <p class="download-note">v1.0.0 · Apple Silicon only · Unsigned build — right-click the app → Open on first launch to bypass Gatekeeper.</p>
+                    </div>
+
+                    <ol class="steps-list">
+                        <li>Unzip the download and drag <strong>ui.app</strong> into Applications.</li>
+                        <li>First launch only: right-click the app → Open → Open again.</li>
+                        <li>Drag any image onto the widget for an AI-probability score and closest art style.</li>
+                    </ol>
                 </div>
             </div>
         </section>

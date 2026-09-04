@@ -141,6 +141,16 @@ p {
     color: white;
 }
 
+.btn-terracotta {
+    background-color: #C86D51;
+    color: #FAF0E6;
+    border-radius: 8px;
+}
+
+.btn-terracotta:hover {
+    background-color: #B35436;
+}
+
 .link-arrow {
     font-family: var(--font-mono);
     font-size: 0.85rem;
@@ -241,7 +251,6 @@ p {
     padding: 1rem;
     border-radius: 4px;
 }
-.mockup-header { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); margin-bottom: 1rem; }
 .widget { background: #222; color: white; padding: 1.5rem; border-radius: 4px; }
 .widget-header h4 { color: white; margin: 0.5rem 0; }
 .widget-details { display: flex; gap: 2rem; margin-top: 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: #aaa; }
@@ -304,35 +313,6 @@ body.dark-page .extension-mockup {
     overflow: hidden;
 }
 
-body.dark-page .mockup-header {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 0;
-    padding: 0.9rem 1.1rem;
-    background: #14171d;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    color: #7d8390;
-}
-
-body.dark-page .mockup-dots { display: flex; gap: 6px; }
-body.dark-page .mockup-dots span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #3a3f4a;
-    display: inline-block;
-}
-
-body.dark-page .mockup-url {
-    font-size: 0.7rem;
-    letter-spacing: 0.02em;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
-    padding: 0.3rem 0.75rem;
-    flex: 1;
-}
-
 body.dark-page .mockup-body { position: relative; }
 
 body.dark-page .mockup-image {
@@ -344,18 +324,61 @@ body.dark-page .mockup-image {
         #05070a;
 }
 
+/* Widget preview — matches the real app's terracotta UI, floating over the desktop mockup */
 body.dark-page .widget {
     position: absolute;
     left: 1rem;
     right: 1rem;
     bottom: 1rem;
-    max-width: 320px;
-    background: rgba(20, 23, 29, 0.94);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    max-width: 300px;
+    background: #FAF0E6;
+    border: 2px solid #C86D51;
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
-body.dark-page .widget p { color: #aaa; margin-bottom: 0.75rem; }
+body.dark-page .widget-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #B35436;
+    margin-bottom: 0.75rem;
+}
+
+body.dark-page .widget-close { color: #C86D51; font-weight: 700; }
+
+body.dark-page .widget-header h4 { color: #4A2818; }
+
+body.dark-page .widget p { color: #8C4830; margin-bottom: 0.75rem; }
+
+body.dark-page .widget-details { color: #6E321E; }
+
+/* Download CTA */
+body.dark-page .download-cta {
+    margin: 2rem 0 1.5rem;
+}
+
+body.dark-page .download-note {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #565b66;
+    margin: 0.75rem 0 0;
+}
+
+body.dark-page .steps-list {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #9aa0ab;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+body.dark-page .steps-list strong { color: #ffffff; }
 
 body.dark-page .img-caption { color: #565b66; }
 
