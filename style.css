@@ -226,6 +226,16 @@ p {
     margin-top: 3rem;
 }
 .feature-list { display: flex; flex-direction: column; gap: 2rem; }
+.feature-item {
+    position: relative;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+.feature-item .point-number {
+    position: static;
+    display: block;
+    margin-bottom: 0.5rem;
+}
 .extension-mockup {
     background: #f5f5f5;
     padding: 1rem;
@@ -235,6 +245,133 @@ p {
 .widget { background: #222; color: white; padding: 1.5rem; border-radius: 4px; }
 .widget-header h4 { color: white; margin: 0.5rem 0; }
 .widget-details { display: flex; gap: 2rem; margin-top: 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: #aaa; }
+
+/* ============================================
+   Extension page — dark theme (page-scoped)
+   ============================================ */
+body.dark-page {
+    background-color: #0b0d12;
+}
+
+body.dark-page h2,
+body.dark-page h3,
+body.dark-page h4 {
+    color: #ffffff;
+}
+
+body.dark-page p {
+    color: #9aa0ab;
+}
+
+body.dark-page .tag {
+    color: var(--accent);
+}
+
+body.dark-page .navbar {
+    background: #ffffff; /* nav chrome stays light, like the reference */
+}
+
+body.dark-page .nav-links a.active {
+    color: var(--text-main);
+    position: relative;
+}
+
+body.dark-page .nav-links a.active::before {
+    content: "";
+    position: absolute;
+    top: -0.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+body.dark-page .feature-item {
+    border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-page .feature-item .point-number {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-page .extension-mockup {
+    background: #14171d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+}
+
+body.dark-page .mockup-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 0;
+    padding: 0.9rem 1.1rem;
+    background: #14171d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #7d8390;
+}
+
+body.dark-page .mockup-dots { display: flex; gap: 6px; }
+body.dark-page .mockup-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3a3f4a;
+    display: inline-block;
+}
+
+body.dark-page .mockup-url {
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    padding: 0.3rem 0.75rem;
+    flex: 1;
+}
+
+body.dark-page .mockup-body { position: relative; }
+
+body.dark-page .mockup-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background:
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.08), transparent 45%),
+        repeating-radial-gradient(circle at 55% 55%, rgba(255, 255, 255, 0.09) 0px, rgba(255, 255, 255, 0.09) 1px, transparent 2px, transparent 7px),
+        #05070a;
+}
+
+body.dark-page .widget {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: 320px;
+    background: rgba(20, 23, 29, 0.94);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-page .widget p { color: #aaa; margin-bottom: 0.75rem; }
+
+body.dark-page .img-caption { color: #565b66; }
+
+body.dark-page .extension-footer {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-page .site-footer {
+    background: #0b0d12;
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-page .footer-brand h2 { color: #ffffff; }
+body.dark-page .nav-links a { color: #9aa0ab; }
+body.dark-page .nav-links a:hover { color: #ffffff; }
+body.dark-page .copyright { color: #565b66; }
 .extension-footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
