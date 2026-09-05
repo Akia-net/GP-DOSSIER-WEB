@@ -151,6 +151,18 @@ p {
     background-color: #B35436;
 }
 
+.btn-terracotta-outline {
+    background-color: transparent;
+    color: #C86D51;
+    border-color: #C86D51;
+    border-radius: 8px;
+}
+
+.btn-terracotta-outline:hover {
+    background-color: #C86D51;
+    color: #FAF0E6;
+}
+
 .link-arrow {
     font-family: var(--font-mono);
     font-size: 0.85rem;
@@ -361,11 +373,18 @@ body.dark-page .download-cta {
     margin: 2rem 0 1.5rem;
 }
 
+body.dark-page .download-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 body.dark-page .download-note {
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: #565b66;
     margin: 0.75rem 0 0;
+    line-height: 1.6;
 }
 
 body.dark-page .steps-list {
@@ -379,6 +398,25 @@ body.dark-page .steps-list {
 }
 
 body.dark-page .steps-list strong { color: #ffffff; }
+
+/* Feedback CTA */
+body.dark-page .feedback-cta {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-page .feedback-cta p { margin-bottom: 1rem; }
+
+body.dark-page .btn-secondary {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+body.dark-page .btn-secondary:hover {
+    background-color: #ffffff;
+    color: #0b0d12;
+}
 
 body.dark-page .img-caption { color: #565b66; }
 
